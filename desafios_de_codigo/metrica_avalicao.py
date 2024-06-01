@@ -36,19 +36,6 @@ best_accuracy = round(best_accuracy, 2)
 best_precision = round(best_precision, 2)
 
 # Imprimir os resultados
-if n == 1 and best_accuracy < 1 and best_precision < 1:
-  print(f"Índice: {best_index}")
-  print(f"Acurácia: {best_accuracy:.1f}")
-  print(f"Precisão: {best_precision:.2f}")
-elif n == 3 and best_accuracy < 1 and best_precision < 1:
-  print(f"Índice: {best_index}")
-  print(f"Acurácia: {best_accuracy:.1f}")
-  print(f"Precisão: {best_precision:.2f}")
-elif n == 4 and best_accuracy < 1 and best_precision < 1:
-  print(f"Índice: {best_index}")
-  print(f"Acurácia: {best_accuracy:.2f}")
-  print(f"Precisão: {best_precision:.1f}")
-else: 
-  print(f"Índice: {best_index}")
-  print(f"Acurácia: {best_accuracy:.1f}")
-  print(f"Precisão: {best_precision:.1f}")
+print(f"Índice: {best_index}")
+print(f"Acurácia: {best_accuracy}")
+print(f"Precisão: {best_precision}")
