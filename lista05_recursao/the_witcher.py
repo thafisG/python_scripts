@@ -7,9 +7,12 @@ def acesso_a_fortaleza(login, senha):
     print(f"Senha: {senha_str}")
 
 # login usuario da diva
-def login_usuario(entrada_codigo):
-    login = []
-    for numero in entrada_codigo:
+def login_usuario(entrada_codigo, indice = 0, login = None):
+    if login == None:
+        login = [] 
+        
+    if indice < len(entrada_codigo):
+        numero = entrada_codigo[indice]
         somatorio = 0
         for i in range(numero, -1, -1):
             if i % 2 == 0:
@@ -17,8 +20,9 @@ def login_usuario(entrada_codigo):
             else:
                 somatorio += i * 3
         login.append(somatorio)
-    
-    return login
+        return login_usuario(entrada_codigo, indice + 1, login)
+    else:
+        return login
 
 # Função fatorial_senha para auxiliar na fatoração (se é q essa palavra existe)
 def fatorial_senha(numero):
